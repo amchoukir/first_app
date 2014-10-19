@@ -6,11 +6,10 @@ ruby '2.1.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 
-gem 'rails_12factor', '0.0.3'
-
 group :development, :test do
 # Use sqlite3 as the database for Active Record
     gem 'sqlite3', '1.3.9'
+    gem 'rails_12factor', '0.0.3'
 end
 
 group :production do
@@ -37,8 +36,17 @@ gem 'jbuilder', '2.1.3'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '0.4.1',          group: :doc
 
+group :development, :test do
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',    '1.1.3',    group: :development
+    gem 'spring',    '1.1.3',    group: :development
+# Call 'debugger' anywhere in the code to stop execution and get a # debugger console
+gem 'byebug'
+# Access an IRB console on exceptions page and /console in development
+gem 'web-console', '~> 2.0.0.beta2'
+
+end
+# Use Rails Html Sanitizer for HTML sanitization
+gem 'rails-html-sanitizer', '~> 1.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
