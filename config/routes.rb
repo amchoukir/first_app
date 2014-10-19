@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   #get '/' => "rails/welcome#index"
 
   # Add a root route to our hello controller
-  root 'application#hello'
+  # root 'application#hello'
+  root 'application#goodbye'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
