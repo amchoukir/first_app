@@ -4,7 +4,14 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  get '/' => "rails/welcome#index"
+
+  # As of rails 4.x the default welcome page of rails is not routed in the
+  # production environemt. Uncomment the below line to get back to the 
+  # pre 4.x behaviour
+  #get '/' => "rails/welcome#index"
+
+  # Add a root route to our hello controller
+  root 'application#hello'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
